@@ -39,10 +39,10 @@ public class PeopleWithinArea {
 	
 	
 	public List<Person> getPeople50MilesOfLondon( List<Person> people) {
-		
+		//using m25 as the boundary which is 20,so 70 miles
 		List<Person> people50MilesOfLondon = people.stream()
 		 .filter( p -> getdDistance(LondonLatitude, Londonlongitude, p.getLatitude(),
-					p.getLongitude())<=600.00).collect(Collectors.toList());
+					p.getLongitude())<=70.00).collect(Collectors.toList());
 	
 		return people50MilesOfLondon;
 
@@ -61,7 +61,7 @@ public class PeopleWithinArea {
 
 		String completeUrl = url+"users";
 		List<Person> p =  getPeople(completeUrl);
-		return getPeople50MilesOfLondon(p);
+		return p;
 	
 	}
 
@@ -97,5 +97,8 @@ public class PeopleWithinArea {
 			return (distance);
 		}
 	}
+	
+	
 
-}
+
+	}

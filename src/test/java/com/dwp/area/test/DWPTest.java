@@ -36,7 +36,7 @@ public class DWPTest {
 	@Test
     public void testTotalNumberofRecords() {
             
-		int ExpectedNumberOfPeople = 47;
+		int ExpectedNumberOfPeople = 1000;
 			 	
 		PeopleWithinArea peopleWithinLondon = new PeopleWithinArea ();
 		List<Person> actualNumberOfPeople = peopleWithinLondon.getAllPeople(url);
@@ -56,6 +56,5 @@ public class DWPTest {
 		
     }
 	
-		
 	
 }
